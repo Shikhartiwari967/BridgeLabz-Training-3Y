@@ -1,0 +1,171 @@
+ Assignment-01
+
+QUESTION 1
+Explain the difference between frontend, backend, and full-stack 
+development with suitable real-world examples.
+
+ANSWER:
+Think of a web application like a physical restaurant:
+
+* Frontend (The Dining Room): Everything the customer sees and experiences.
+  It includes tables, decor, menus, and waiters. In web development, 
+  this is the User Interface (UI)—buttons, text, colors, and forms.
+  - Real-World Example: On Netflix, the grid of movie posters, the 
+    play button, and the search bar are frontend elements.
+
+* Backend (The Kitchen): The hidden area where the work happens. Chefs 
+  cook food and manage inventory. In web development, this consists 
+  of the server, application logic, and databases processing data.
+  - Real-World Example: On Netflix, when you click "Play", the backend 
+    checks your subscription status and streams the video file to you.
+
+* Full-Stack (The Manager): This role understands both sides. Full-stack 
+  developers write user-facing code and build underlying server logic.
+  - Real-World Example: A full-stack developer designs a new profile 
+    selection screen and writes the server code to save it to the database.
+
+
+
+QUESTION 2
+Create a simple diagram showing how the client-server model works 
+in web architecture.
+
+ANSWER:
+[ Client (Browser) ] ---- (1) HTTP Request ----> [ Web Server ]
+[ Client (Browser) ] <--- (2) HTTP Response ---- [ Web Server ]
+
+
+
+QUESTION 3
+Describe how a browser requests and displays a web page from a 
+web server.
+
+ANSWER:
+1. DNS Lookup: Browser asks a Domain Name System (DNS) server to 
+   translate a URL (e.g., google.com) into an IP address.
+2. Connection: Browser opens a network connection to that IP address 
+   using internet protocols (TCP/IP and secure TLS handshake).
+3. HTTP Request: Browser sends an HTTP/HTTPS request to the server 
+   asking for the website files.
+4. Server Response: Server processes the request and sends back an 
+   HTTP response code (like 200 OK) along with the source files.
+5. Parsing: Browser reads the HTML to build the page structure (DOM), 
+   applies visual styles from CSS, and runs JavaScript for animations.
+6. Display: Browser paints the final pixels onto your screen.
+
+
+
+QUESTION 4
+Identify and list the tools required to set up a web development 
+environment. Explain the purpose of each.
+
+ANSWER:
+* Code Editor / IDE: Software where you write your code. 
+  - Purpose: Provides code highlighting, auto-completion, and file management.
+  - Examples: Visual Studio Code, Sublime Text.
+* Web Browser & DevTools: Used to run websites and debug errors. 
+  - Purpose: Displays your code output and lets you inspect design properties.
+  - Examples: Google Chrome, Mozilla Firefox.
+* Version Control (Git): Tracks code history and manages collaboration.
+  - Purpose: Prevents lost work and allows code teamwork.
+  - Tool: Git.
+* Package Manager: Downloads and manages external code libraries. 
+  - Purpose: Integrates third-party tool dependencies into projects easily.
+  - Examples: npm, Yarn.
+* Command Line / Terminal: Text interface used to run developer tools.
+  - Purpose: Allows rapid system configurations and project scripts execution.
+  - Examples: Bash, PowerShell, Terminal.
+
+
+QUESTION 5
+Explain what a web server is and give examples of commonly used servers.
+
+ANSWER:
+A web server is hardware/software that stores website assets and 
+delivers them to clients over the internet using the HTTP protocol.
+
+Common Software Examples:
+* Apache HTTP Server: Open-source server powering a huge part of the web.
+* Nginx: High-performance server built for speed and high traffic.
+* Microsoft IIS: Server platform optimized for Windows environments.
+* Node.js: Allows developers to write custom web servers in JavaScript.
+
+
+QUESTION 6
+Define the roles of a frontend developer, backend developer, and 
+database administrator in a project.
+
+ANSWER:
+* Frontend Developer: Converts visual UI designs into working code. 
+  Ensures compatibility across multiple screen sizes and devices.
+* Backend Developer: Builds application logic, handles security 
+  permissions, and constructs custom APIs.
+* Database Administrator (DBA): Structures data tables, handles 
+  backups, and optimizes data retrieval speeds.
+
+
+
+QUESTION 7
+Install VS Code and configure it for HTML, CSS, and JavaScript 
+development. Take a screenshot of the setup.
+
+ANSWER:
+Note: AI systems cannot directly install desktop files or snap a 
+live monitor screenshot. Use these steps to configure your environment:
+
+1. Download VS Code installer from ://visualstudio.com and install it.
+2. Open Extensions View by pressing Ctrl+Shift+X (or Cmd+Shift+X on Mac).
+3. Search for and install "Live Server" and "Prettier - Code formatter".
+4. Go to File > Open Folder and create a project folder named "WebDev".
+5. Create a file inside called "index.html", type "!" and press Tab.
+6. Right-click inside your HTML file and select "Open with Live Server".
+
+
+QUESTION 8
+Explain the difference between static and dynamic websites. 
+Provide an example of each.
+
+ANSWER:
+* Static Websites:
+  - Deliver identical pre-written files to every single visitor.
+  - Do not use a database to store or display content.
+  - Built using basic HTML, CSS, and simple client-side JavaScript.
+  - Example: A local bakery's informational landing page.
+  
+* Dynamic Websites:
+  - Generate and change content in real-time based on user data.
+  - Heavily rely on a backend database to assemble data dynamically.
+  - Built using backend languages like Python, PHP, or Node.js.
+  - Example: An Amazon product page with changing inventory counts.
+
+
+QUESTION 9
+Research and list five web browsers. Explain how rendering engines 
+differ between them.
+
+ANSWER:
+Browsers use rendering engines to interpret code and output visual graphics:
+
+* Google Chrome: Uses Blink. Fast, modern, and widely compatible.
+* Safari: Uses WebKit. Power-efficient and optimized for Apple devices.
+* Mozilla Firefox: Uses Gecko. Open-source engine focused on privacy.
+* Microsoft Edge: Uses Blink. Standardized compatibility with Chrome.
+* Opera: Uses Blink. Offers a customized interface built on Chrome tech.
+
+
+QUESTION 10
+Draw a labeled diagram showing the basic web architecture flow 
+— client, server, database, and APIs.
+
+ANSWER:
+[ Client (Browser) ]
+        ||
+        \/ (HTTP Requests / Responses)
+[ API / Gateway ]
+        ||
+        \/ (Data exchange)
+[ Backend Server (App Logic) ]
+        ||
+        \/ (SQL Queries / Updates)
+[ Database (Data Storage) ]
+
