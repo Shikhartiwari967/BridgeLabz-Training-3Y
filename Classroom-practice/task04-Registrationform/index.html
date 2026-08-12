@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Student Registration Form</h1>
+    <table border="1" cellpadding="10" cellspacing="0" width="50%" style="margin: 0 auto;">
+        <tr >
+            <th colspan="6">Registration Form</th>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td>
+                <input for="full_name" type="text" name="full_name" placeholder="Enter your full name" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input for="email" type="email" name="email" placeholder="Enter your email" required>
+            </td>   
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>
+                <input for="phone" type="tel" name="phone" placeholder="Enter your phone number" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>
+                <input for="dob" type="date" name="dob" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                    <input for="male" type="radio" name="gender" value="male" required> Male
+            
+                    <input for="female" type="radio" name="gender" value="female " required> Female
+            
+                   <input for="other" type="radio" name="gender" value="other" required> Other
+            </td>
+        </tr>
+        <tr>
+            <td>Skills</td>
+            <td>
+                <input for="html" type="checkbox" name="skills" value="HTML" required> HTML
+                <input for="css" type="checkbox" name="skills" value="CSS" required> CSS
+                <input for="javascript" type="checkbox" name="skills" value="JavaScript" required> JavaScript
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select name="course" required>
+                    <option value="">Select a course</option>
+                    <option value="web_development">Web Development</option>
+                    <option value="data_science">Data Science</option>
+                    <option value="machine_learning">Machine Learning</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                <textarea name="address" rows="4" cols="30" placeholder="Enter your address" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Upload Resume</td>
+            <td>
+                <input for="resume" type="file" name="resume" accept=".pdf,.doc,.docx" required>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align: center;">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
