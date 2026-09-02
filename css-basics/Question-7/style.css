@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #e0f2fe;
+    color: #1e293b;
+}
+
+
+
+
+.header {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #0f172a;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+
+    font-size: 2rem;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+
+
+.contact-container {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+
+
+.contact-form {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 35px;
+
+    background-color: white;
+    color: #1e293b;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+   
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #0f172a;
+    font-size: 1.8rem;
+}
+
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    color: #334155;
+}
+
+
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #f8fafc;
+    color: #1e293b;
+
+    border: 2px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+
+    
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+   
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border: 2px solid #2563eb;
+    border-radius: 7px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+
+
+.footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #0f172a;
+    color: white;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+}

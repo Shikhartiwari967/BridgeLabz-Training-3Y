@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh; /* vh unit */
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5%;
+    background-color: #172554;
+    color: white;
+
+    
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.5rem; 
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+
+main {
+    flex: 1;
+
+    
+    padding-top: 70px;
+}
+
+
+
+.hero {
+    min-height: 75vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+
+    padding: 5%;
+    background-color: #dbeafe;
+}
+
+.hero-content {
+    width: 50%; 
+}
+
+.hero-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem; 
+    color: #172554;
+}
+
+.hero-content p {
+    margin-bottom: 2em; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 12px 24px; 
+    background-color: #172554;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #1e40af;
+}
+
+
+
+
+.profile img {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #172554;
+}
+
+
+
+.about {
+    min-height: 40vh;
+
+    padding: 5rem 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.about h2,
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #172554;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+
+.contact {
+    padding: 4rem 10%;
+    text-align: center;
+    background-color: #e0f2fe;
+}
+
+.contact p {
+    margin: 0.5em;
+}
+
+
+
+.footer {
+    padding: 1.5rem;
+    text-align: center;
+
+    background-color: #172554;
+    color: white;
+
+    
+}
