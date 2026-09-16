@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Main dashboard grid */
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    /* Sidebar + main area */
+    grid-template-columns: 220px 1fr;
+
+    /* Header + content */
+    grid-template-rows: 80px 1fr;
+}
+
+/* Header spans both columns */
+header {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+    background-color: #263238;
+    color: white;
+}
+
+/* Sidebar */
+aside {
+    padding: 25px;
+    background-color: #37474f;
+    color: white;
+}
+
+aside h2 {
+    margin-bottom: 25px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+aside a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Content area */
+.content {
+    display: grid;
+
+    /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Dashboard boxes */
+.dashboard-box {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.dashboard-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Box spans two columns */
+.box3 {
+    grid-column: span 2;
+}
+
+/* Responsive dashboard */
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    header {
+        grid-column: 1;
+    }
+
+    aside {
+        text-align: center;
+    }
+
+    aside nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .box3 {
+        grid-column: span 1;
+    }
+}

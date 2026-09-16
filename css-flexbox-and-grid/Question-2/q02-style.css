@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #263238;
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+
+    /* Four equal columns on desktop */
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+    padding: 40px 6%;
+}
+
+.product-card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Smooth hover animation */
+    transition: 0.3s;
+}
+
+.product-card h2 {
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Required hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

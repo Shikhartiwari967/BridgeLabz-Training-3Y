@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f8;
+}
+
+/* Pricing section */
+.pricing-section {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 5%;
+}
+
+.pricing-section > h1 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+/* Cards arranged horizontally */
+.pricing-container {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+/* Pricing cards */
+.pricing-card {
+    position: relative;
+
+    flex: 1;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    /* Required fade-in animation */
+    animation: fadeIn 1s ease-in;
+    
+    transition: 0.3s;
+}
+
+/* Middle card is larger */
+.popular {
+    transform: scale(1.08);
+    background-color: #dbeafe;
+}
+
+/* Hover effect */
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Keep popular card enlarged while hovering */
+.popular:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.pricing-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.price {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.pricing-card a {
+    padding: 12px 25px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.pricing-card a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Popular badge */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    padding: 5px 10px;
+    background-color: #f59e0b;
+    color: white;
+
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stack cards below 750px */
+@media (max-width: 750px) {
+
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+}
