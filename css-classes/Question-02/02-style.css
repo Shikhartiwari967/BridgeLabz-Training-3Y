@@ -1,0 +1,178 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+
+    /* Flexbox page layout */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    background-color: #243b53;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+
+
+main {
+    flex: 1;
+
+    /* Center all tooltip examples */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Flexbox for arranging tooltip examples */
+
+.tooltip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+.tooltip-box {
+    position: relative;
+    display: inline-block;
+}
+
+
+.tooltip-element {
+    display: inline-block;
+
+    background-color: #2878c8;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+}
+
+/* Change appearance when hovered */
+
+.tooltip-element:hover {
+    background-color: #174a7c;
+    transform: translateY(-3px);
+}
+
+
+
+.tooltip-text {
+    position: absolute;
+
+    /* Place tooltip above the element */
+    bottom: calc(100% + 12px);
+    left: 50%;
+
+    /* Center tooltip horizontally */
+    transform: translateX(-50%);
+
+    background-color: #222;
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+
+    /* Hidden initially */
+    opacity: 0;
+    visibility: hidden;
+
+    /* Smooth fade-in transition */
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+.tooltip-text::after {
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 6px;
+    border-style: solid;
+
+    border-color: #222 transparent transparent transparent;
+}
+
+
+
+.tooltip-box:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+footer {
+    background-color: #243b53;
+    color: white;
+
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .tooltip-container {
+        gap: 25px;
+    }
+
+    .tooltip-element {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .tooltip-container {
+        flex-direction: column;
+    }
+
+    .tooltip-text {
+        font-size: 13px;
+    }
+}
