@@ -1,0 +1,72 @@
+/* General reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.gallery {
+    display: grid;
+    /* Automatically creates as many columns as will fit, with a minimum width of 200px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    /* Smooth transition for hover effect */
+    transition: filter 0.4s ease; 
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* CSS Filters */
+.blur img { filter: blur(4px); }
+.grayscale img { filter: grayscale(100%); }
+.sepia img { filter: sepia(100%); }
+.brightness img { filter: brightness(1.5); }
+.contrast img { filter: contrast(150%); }
+.hue-rotate img { filter: hue-rotate(90deg); }
+
+/* Remove filter on hover */
+.gallery-item:hover img {
+    filter: none;
+}
+
+/* Media Query for screens below 600px */
+@media (max-width: 600px) {
+    .gallery {
+        /* Forces exactly one column on small screens */
+        grid-template-columns: 1fr; 
+    }
+}

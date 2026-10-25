@@ -1,0 +1,140 @@
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+}
+
+/* Keyframes for Load Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dashboard Layout (CSS Grid) - Desktop */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.dashboard-header {
+    grid-area: header;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Sidebar Styling */
+.dashboard-sidebar {
+    grid-area: sidebar;
+    background-color: #334155;
+    padding: 2rem 1.5rem;
+}
+
+.dashboard-sidebar ul {
+    list-style: none;
+}
+
+.dashboard-sidebar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 0;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.dashboard-sidebar a:hover {
+    color: #ffffff;
+}
+
+/* Main Content Area */
+.dashboard-main {
+    grid-area: main;
+    padding: 2rem;
+    /* Apply load animation */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Sub-grid for Cards inside Main Content */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05); /* Scales up slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Increased shadow */
+}
+
+/* Media Query - Screens below 750px */
+@media (max-width: 750px) {
+    .dashboard-container {
+        /* Shift to a single column layout */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "main";
+    }
+
+    /* Convert sidebar links into a horizontal row at the top */
+    .dashboard-sidebar {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .dashboard-sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .dashboard-sidebar a {
+        padding: 0.5rem 0;
+    }
+}

@@ -1,0 +1,106 @@
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: 3rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* CSS Grid Layout - Large Screens (2-3 columns) */
+.cheat-sheet {
+    display: grid;
+    /* auto-fit allows the grid to switch between 2 or 3 columns based on available width */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cheat Sheet Term Boxes */
+.term-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.term-box h2 {
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.term-box p {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.term-box code {
+    display: inline-block;
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #d946ef;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+/* Interactive Hover Effects */
+.term-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-left-color: #d946ef;
+}
+
+/* Media Query - Small Screens (Below 700px) */
+@media (max-width: 700px) {
+    .cheat-sheet {
+        grid-template-columns: 1fr; /* Stack rows */
+        gap: 1rem;
+    }
+
+    /* Convert to Key: Value style layout */
+    .term-box {
+        display: flex;
+        flex-direction: column;
+        border-left: none;
+        border-top: 5px solid #3b82f6;
+    }
+    
+    /* Emphasize the heading as the 'Key' */
+    .term-box h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .term-box h2::after {
+        content: ":"; /* Visually separate key and value */
+    }
+
+    .term-box:hover {
+        border-top-color: #d946ef;
+        border-left-color: transparent;
+    }
+}
