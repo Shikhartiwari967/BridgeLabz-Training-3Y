@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Landing Page</title>
+    
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS to fulfill the "separate CSS file" requirement (inline here for convenience, but you should move this to a style.css file) -->
+    <style>
+        /* Custom styling can go here if needed, but we'll mostly rely on Bootstrap */
+        .hero-section {
+            padding: 100px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar 
+         navbar: base class for navigation
+         navbar-expand-lg: makes it responsive (collapses on smaller screens)
+         navbar-dark bg-dark: sets a dark theme with light text 
+    -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Company Name -->
+                <a class="navbar-brand fw-bold" href="#">StartupCo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section 
+         bg-light: light grey background
+         text-center: centers the text
+         py-5: adds padding to top and bottom (y-axis)
+    -->
+    <main>
+        <section class="hero-section bg-light text-center py-5">
+            <div class="container">
+                <!-- display-4: large Bootstrap heading utility -->
+                <h1 class="display-4 fw-bold">Welcome to StartupCo</h1>
+                
+                <!-- lead: makes the paragraph stand out slightly more than standard text -->
+                <p class="lead text-muted mb-4">Innovating the future, one step at a time. Join us on our journey to revolutionize the industry.</p>
+                
+                <!-- btn btn-primary: styles the link as a blue button
+                     btn-lg: makes the button large 
+                -->
+                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Features Section (Demonstrating Grid System) -->
+        <section class="py-5">
+            <!-- container: centers the content and provides a max-width -->
+            <div class="container">
+                <!-- row: creates a horizontal row to hold columns -->
+                <div class="row text-center">
+                    <!-- col-md-4: takes up 4 out of 12 grid columns on medium screens and up (making 3 equal columns) -->
+                    <div class="col-md-4 mb-4">
+                        <h3 class="fw-bold">Fast</h3>
+                        <p>Our solutions are optimized for speed and efficiency, ensuring you get results in record time.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h3 class="fw-bold">Reliable</h3>
+                        <p>Count on us 24/7. Our uptime is guaranteed to keep your business running smoothly.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h3 class="fw-bold">Scalable</h3>
+                        <p>Grow without limits. Our architecture scales effortlessly alongside your business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 StartupCo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle via CDN (Required for Navbar toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

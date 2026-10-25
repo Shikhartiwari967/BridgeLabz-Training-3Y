@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS (Move to style7.css) -->
+    <style>
+        body {
+            background-color: #f4f7f6;
+        }
+        /* Constrains the max width of our app for better readability on large screens */
+        .task-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-3 mb-4 shadow-sm">
+        <!-- d-flex justify-content-between: Aligns the title to the left and the badge to the right -->
+        <div class="container d-flex justify-content-between align-items-center task-container">
+            <h1 class="h4 mb-0 fw-bold">TaskMaster</h1>
+            
+            <!-- Badge counter in the header showing pending tasks -->
+            <!-- text-bg-light: Light background with dark text for contrast against the primary header -->
+            <!-- rounded-pill: Makes the badge highly rounded -->
+            <span class="badge text-bg-light fs-6 rounded-pill shadow-sm">3 Pending</span>
+        </div>
+    </header>
+
+    <!-- Main Application Area -->
+    <main class="container task-container">
+        
+        <!-- Task List Card -->
+        <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white fw-bold py-3">
+                Current Tasks
+            </div>
+            
+            <!-- list-group: The main container for the list items -->
+            <!-- list-group-flush: Removes borders and rounded corners to fit flush inside the card -->
+            <ul class="list-group list-group-flush">
+                
+                <!-- Task 1 (High Priority) -->
+                <!-- d-flex justify-content-between align-items-center: Pushes the task text to the left and badge to the right, keeping them vertically centered -->
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="" id="task1">
+                        <label class="form-check-label" for="task1">Fix production server outage</label>
+                    </div>
+                    <!-- text-bg-danger: Red contextual color for High priority -->
+                    <span class="badge text-bg-danger rounded-pill">High</span>
+                </li>
+
+                <!-- Task 2 (Medium Priority) -->
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="" id="task2">
+                        <label class="form-check-label" for="task2">Update user documentation</label>
+                    </div>
+                    <!-- text-bg-warning: Yellow/Orange contextual color for Medium priority -->
+                    <span class="badge text-bg-warning rounded-pill">Medium</span>
+                </li>
+
+                <!-- Task 3 (Low Priority) -->
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="" id="task3">
+                        <label class="form-check-label" for="task3">Reply to team emails</label>
+                    </div>
+                    <!-- text-bg-info: Light blue contextual color for Low priority -->
+                    <span class="badge text-bg-info rounded-pill">Low</span>
+                </li>
+                
+            </ul>
+        </div>
+
+        <!-- Action Area -->
+        <div class="text-end mb-5">
+            <!-- Completed button with embedded badge -->
+            <!-- btn btn-success: Styles the button with a green theme -->
+            <button type="button" class="btn btn-success shadow-sm">
+                Completed Tasks 
+                <!-- embedded badge inside the button -->
+                <span class="badge text-bg-light ms-2 text-success">12</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

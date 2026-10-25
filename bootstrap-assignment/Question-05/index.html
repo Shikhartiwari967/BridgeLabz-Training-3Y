@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Themed Blog</title>
+    
+    <!-- Google Fonts: Importing 'Poppins' for a custom look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Theme CSS (Move this to style5.css) -->
+    <style>
+        /* Overriding Bootstrap CSS Variables in the root element */
+        :root {
+            /* Changing the primary color to a custom vibrant purple */
+            --bs-primary: #6f42c1;
+            --bs-primary-rgb: 111, 66, 193;
+            
+            /* Changing the default sans-serif font to our Google Font */
+            --bs-font-sans-serif: 'Poppins', sans-serif;
+            
+            /* Changing the body background color slightly */
+            --bs-body-bg: #f8f6fb;
+        }
+
+        /* Applying the custom font directly to ensure headings pick it up */
+        body {
+            font-family: var(--bs-font-sans-serif);
+        }
+
+        /* Custom styling for card borders using the new primary color */
+        .card-custom {
+            border-top: 4px solid var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <!-- text-bg-primary: Uses the overridden primary color for background and ensures text is readable -->
+    <!-- py-4: Adds padding on the y-axis (top and bottom) -->
+    <header class="text-bg-primary py-4 mb-5 shadow-sm">
+        <div class="container text-center">
+            <!-- fw-bold: Makes the text bold -->
+            <h1 class="display-5 fw-bold mb-0">The Dev Journey</h1>
+            <p class="lead mb-0">Insights, tutorials, and tech stories.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <!-- container: Centers content and adds horizontal padding -->
+    <main class="container mb-5">
+        <!-- row: Creates a flexbox container for the grid columns -->
+        <!-- g-4: Adds a gap between columns -->
+        <div class="row g-4">
+            
+            <!-- Blog Post Card 1 -->
+            <!-- col-md-6: Takes up half the row (6/12 columns) on medium screens and larger -->
+            <div class="col-md-6">
+                <!-- card: Bootstrap's card component -->
+                <!-- shadow-sm: Adds a subtle shadow -->
+                <div class="card h-100 shadow-sm card-custom">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Coding on laptop">
+                    <div class="card-body">
+                        <!-- text-primary: Uses the custom purple color for the text -->
+                        <h2 class="card-title h4 text-primary fw-bold">Mastering CSS Variables</h2>
+                        <p class="text-muted small mb-3">Published on Oct 25, 2026</p>
+                        <p class="card-text">Learn how to leverage CSS variables to create dynamic themes in your Bootstrap 5 projects without writing complex SCSS.</p>
+                    </div>
+                    <!-- card-footer: A separate section at the bottom of the card -->
+                    <!-- bg-transparent: Removes the default gray background -->
+                    <div class="card-footer bg-transparent border-0 pb-4 px-3">
+                        <!-- btn btn-primary: Uses the custom primary color for the button -->
+                        <a href="#" class="btn btn-primary w-100">Read Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post Card 2 -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm card-custom">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Code on screen">
+                    <div class="card-body">
+                        <h2 class="card-title h4 text-primary fw-bold">Why Accessibility Matters</h2>
+                        <p class="text-muted small mb-3">Published on Oct 22, 2026</p>
+                        <p class="card-text">A deep dive into building inclusive web applications using semantic HTML and Bootstrap's built-in accessibility features.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-4 px-3">
+                        <!-- btn-outline-primary: Creates a button with a colored border and text, using our custom primary color -->
+                        <a href="#" class="btn btn-outline-primary w-100">Read Article</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <!-- border-top: Adds a top border -->
+    <!-- text-muted: Makes the text a lighter gray -->
+    <footer class="border-top py-4 text-center text-muted">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 The Dev Journey Blog. Built with custom Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
