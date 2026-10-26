@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .active{
+        visibility: visible;
+    }
+    .notActive{
+        visibility: hidden;
+    }
+
+</style>
+
+<body>
+    <!-- <h1 id="head">Shree Radha !!</h1> -->
+
+    <h1 id="head">0</h1>
+    <button id ="inc">Increment </button>
+    <button id="dec">Decrement</button>
+    <button id="reset">Reset</button>
+    <button id="toggle">Toggle</button>
+</body>
+
+<script>
+  const incEl = document.getElementById("inc");
+  const decEl = document.getElementById("dec"); 
+  const headEl = document.getElementById("head");
+  const resetEl = document.getElementById("reset");
+  const toggleEl = document.getElementById("toggle");
+
+
+  let count =0;
+    incEl.addEventListener("click", function(){
+        count++;
+        headEl.textContent = count;
+    })
+    decEl.addEventListener("click", function(){
+        count--;
+        headEl.textContent = count;
+    })
+    resetEl.addEventListener("click",function(){
+        count = 0;
+        headEl.textContent = count;
+    })
+    toggleEl.addEventListener("click",function(){
+        headEl.classList.toggle("notActive");
+    })
+</script>
+
+</html>
